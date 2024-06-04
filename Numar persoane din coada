@@ -1,0 +1,30 @@
+#include<iostream>
+#include <fstream>
+
+using namespace std;
+
+ifstream f("coada2.in");
+
+ofstream g("coada2.out");
+
+long long x,y,z,a;
+
+int main(){
+
+ f>>x>>y>>z;
+
+ if (x>=y || x>=z)
+     g<<-1; 
+ else{
+ a = y+z-x;
+  if(a<2)
+    g<<-1;
+  else
+     g<<a;
+    }
+
+f.close();
+
+g.close();
+
+}
